@@ -1,0 +1,356 @@
+/* =========== Global Styles =========== */
+
+@font-face {
+  font-display: swap;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/barlow-v12-latin-regular.woff2") format("woff2"),
+    url("../fonts/barlow-v12-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/barlow-v12-latin-700.woff2") format("woff2"),
+    url("../fonts/barlow-v12-latin-700.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "fraunces-9pt-black";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/fraunces-9pt-black.woff2") format("woff2"),
+    url("../fonts/fraunces-9pt-black.woff") format("woff");
+}
+
+:root {
+  --main-darkcyan: #0e8784;
+  --main-darkgrey: #333d4b;
+  --main-orange: #fdd6ba;
+  --light-cream: #fefcf7;
+  --secondary-grey: #83888f;
+  --main-blue: #2c343e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Barlow", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  /* color: #333; */
+}
+img {
+  display: block;
+}
+main {
+  flex-grow: 1;
+}
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========== Header Styles =========== */
+
+.header {
+  padding-top: 26px;
+  padding-bottom: 34px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  display: none;
+}
+.nav-menu {
+  display: flex;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.nav-item:not(:last-child) {
+  margin-right: 33px;
+}
+.nav-link {
+  font-family: "Barlow";
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.923077px;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  color: var(--secondary-grey);
+  -moz-text-decoration-line: none;
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 16px;
+  height: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--main-darkgrey);
+  border-radius: 1.5px;
+}
+.bar:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+@media (min-width: 700px) {
+  .header {
+    padding-top: 40px;
+    padding-bottom: 53px;
+  }
+  .nav-img {
+    width: 236px;
+    height: 26px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* =========== Main Styles =========== */
+
+.main {
+}
+
+.intro {
+  background-image: url("../images/Coffee-pot@1x.png"),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-blend-mode: overlay;
+  border-radius: 10px;
+  background-position: calc(53% + 96px) calc(100% + 0px);
+  background-repeat: no-repeat;
+  background-size: calc(100% + 700px) calc(100% + 300px);
+}
+.intro__inner {
+  padding: 60px 14px 60px;
+  text-align: center;
+}
+.intro__title {
+  font-family: "fraunces-9pt-black";
+  font-size: 28px;
+  line-height: 28px;
+  color: var(--light-cream);
+}
+.intro__text {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--light-cream);
+  opacity: 0.8;
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+.intro__link {
+}
+.link {
+  display: inline-block;
+  font-family: "fraunces-9pt-black";
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--light-cream);
+  text-decoration: none;
+  background-color: #0e8784;
+  border-radius: 6px;
+  padding: 12px 25px 13px;
+}
+
+@media (min-width: 375px) {
+  .header {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+  .intro {
+    background-position: calc(50% + 119px) calc(100% + 0px);
+    background-repeat: no-repeat;
+    background-size: calc(100% + 928px) calc(100% + 352px);
+  }
+  .intro__inner {
+    max-width: 398px;
+    padding: 100px 24px 99px;
+    text-align: center;
+  }
+  .intro__title {
+    font-family: "fraunces-9pt-black";
+    font-size: 40px;
+    line-height: 40px;
+    color: var(--light-cream);
+  }
+  .intro__text {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--light-cream);
+    opacity: 0.8;
+    margin-top: 24px;
+    margin-bottom: 39px;
+  }
+  .link {
+    display: inline-block;
+    font-family: "fraunces-9pt-black";
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--light-cream);
+    text-decoration: none;
+    background-color: #0e8784;
+    border-radius: 6px;
+    padding: 15px 31px 16px;
+  }
+}
+@media (min-width: 575px) {
+  .hamburger {
+    display: none;
+  }
+  .nav {
+    display: block;
+  }
+  .header {
+    padding-top: 40px;
+    padding-bottom: 53px;
+  }
+  .intro {
+    background-image: url(../images/Coffee-pot@1x.png);
+    background-position: calc(50% + 308px) bottom;
+    background-repeat: no-repeat;
+    background-size: calc(100% + 629px) calc(100% + 342px);
+  }
+  .intro__inner {
+    padding: 104px 58px 104px 58px;
+    text-align: left;
+    max-width: 529px;
+    width: 100%;
+  }
+  .intro__title {
+    font-family: "fraunces-9pt-black";
+    font-size: 40px;
+    line-height: 40px;
+    color: var(--light-cream);
+    max-width: 329px;
+  }
+  .intro__text {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--light-cream);
+    opacity: 0.8;
+    margin-top: 24px;
+    margin-bottom: 39px;
+  }
+  .link {
+    display: inline-block;
+    font-family: "fraunces-9pt-black";
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--light-cream);
+    text-decoration: none;
+    background-color: #0e8784;
+    border-radius: 6px;
+    padding: 15px 31px 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-top: 44px;
+    padding-bottom: 41px;
+  }
+  .intro {
+    background-image: url(../images/Coffee-pot@1x.png);
+    background-position: calc(100% + 490px) calc(100% + 0px);
+    background-repeat: no-repeat;
+    background-size: calc(100% + 540px);
+  }
+  .intro__inner {
+    padding: 117px 85px;
+    text-align: left;
+    max-width: 623px;
+    width: 100%;
+  }
+  .intro__title {
+    font-family: "fraunces-9pt-black";
+    font-size: 72px;
+    line-height: 72px;
+    color: var(--light-cream);
+    max-width: 663px;
+  }
+  .intro__text {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--light-cream);
+    opacity: 0.8;
+    margin-top: 32px;
+    margin-bottom: 56px;
+    max-width: 392px;
+    width: 100%;
+    text-align: left;
+  }
+  .link {
+    display: inline-block;
+    font-family: "fraunces-9pt-black";
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: var(--light-cream);
+    text-decoration: none;
+    background-color: #0e8784;
+    border-radius: 6px;
+    padding: 15px 31px 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .intro {
+    background-image: url(../images/Coffee-pot@1x.png);
+    background-position: calc(100% + 677px) calc(100% + 179px);
+    background-repeat: no-repeat;
+    background-size: calc(100% + 697px);
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../images/Coffee-pot@2x.png");
+  }
+}
