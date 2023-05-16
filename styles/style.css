@@ -189,6 +189,9 @@ main {
     padding-bottom: 40px;
   }
   .intro {
+    background-image: url("../images/Coffee-pot@1x.png"),
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-blend-mode: overlay;
     background-position: calc(50% + 119px) calc(100% + 0px);
     background-repeat: no-repeat;
     background-size: calc(100% + 928px) calc(100% + 352px);
